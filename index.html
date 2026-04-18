@@ -55,6 +55,48 @@
         </div>
       </div>
     </div>
+    <div class="hero-compass" aria-hidden="true">
+      <svg class="compass-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring -->
+        <circle cx="300" cy="300" r="278" stroke="#C9A96E" stroke-width="0.7" stroke-opacity="0.22"/>
+        <!-- Cardinal tick marks -->
+        <line x1="300" y1="22"  x2="300" y2="46"  stroke="#C9A96E" stroke-width="1.5" stroke-opacity="0.55"/>
+        <line x1="578" y1="300" x2="554" y2="300" stroke="#C9A96E" stroke-width="1.5" stroke-opacity="0.55"/>
+        <line x1="300" y1="578" x2="300" y2="554" stroke="#C9A96E" stroke-width="1.5" stroke-opacity="0.55"/>
+        <line x1="22"  y1="300" x2="46"  y2="300" stroke="#C9A96E" stroke-width="1.5" stroke-opacity="0.55"/>
+        <!-- Minor tick marks at 45° -->
+        <line x1="496" y1="104" x2="479" y2="121" stroke="#C9A96E" stroke-width="0.8" stroke-opacity="0.3"/>
+        <line x1="496" y1="496" x2="479" y2="479" stroke="#C9A96E" stroke-width="0.8" stroke-opacity="0.3"/>
+        <line x1="104" y1="496" x2="121" y2="479" stroke="#C9A96E" stroke-width="0.8" stroke-opacity="0.3"/>
+        <line x1="104" y1="104" x2="121" y2="121" stroke="#C9A96E" stroke-width="0.8" stroke-opacity="0.3"/>
+        <!-- Mid ring dashed -->
+        <circle cx="300" cy="300" r="196" stroke="#C9A96E" stroke-width="0.5" stroke-opacity="0.16" stroke-dasharray="3 11"/>
+        <!-- Cardinal dots on mid ring -->
+        <circle cx="300" cy="104" r="2.5" fill="#C9A96E" fill-opacity="0.35"/>
+        <circle cx="496" cy="300" r="2.5" fill="#C9A96E" fill-opacity="0.35"/>
+        <circle cx="300" cy="496" r="2.5" fill="#C9A96E" fill-opacity="0.35"/>
+        <circle cx="104" cy="300" r="2.5" fill="#C9A96E" fill-opacity="0.35"/>
+        <!-- Inner ring -->
+        <circle cx="300" cy="300" r="116" stroke="#C9A96E" stroke-width="0.5" stroke-opacity="0.2" stroke-dasharray="1.5 9"/>
+        <!-- Crosshair guides (very faint) -->
+        <line x1="300" y1="22"  x2="300" y2="578" stroke="#C9A96E" stroke-width="0.3" stroke-opacity="0.08"/>
+        <line x1="22"  y1="300" x2="578" y2="300" stroke="#C9A96E" stroke-width="0.3" stroke-opacity="0.08"/>
+        <!-- Centre hub -->
+        <circle cx="300" cy="300" r="14" stroke="#C9A96E" stroke-width="0.8" stroke-opacity="0.4"/>
+        <circle cx="300" cy="300" r="4"  fill="#C9A96E"   fill-opacity="0.9"/>
+        <!-- Primary rotating arm (25s) -->
+        <g class="compass-arm-primary">
+          <line x1="300" y1="300" x2="300" y2="28" stroke="#C9A96E" stroke-width="1.8" stroke-opacity="0.9" stroke-linecap="round"/>
+          <line x1="300" y1="300" x2="300" y2="370" stroke="#C9A96E" stroke-width="0.8" stroke-opacity="0.35" stroke-linecap="round"/>
+          <circle cx="300" cy="34" r="3.5" fill="#C9A96E" fill-opacity="0.95"/>
+        </g>
+        <!-- Secondary counter-rotating arm (50s) -->
+        <g class="compass-arm-secondary">
+          <line x1="300" y1="300" x2="300" y2="108" stroke="#C9A96E" stroke-width="0.9" stroke-opacity="0.45" stroke-linecap="round"/>
+          <circle cx="300" cy="114" r="2" fill="#C9A96E" fill-opacity="0.55"/>
+        </g>
+      </svg>
+    </div>
     <div class="scroll-hint">
       <span class="scroll-track"></span>
       Scroll
@@ -103,68 +145,263 @@
     </div>
 
     <div class="vignettes-grid">
-      <div class="vignette-card">
-        <div class="vcard-top-bar"></div>
-        <div class="vcard-sector">Energy &middot; Digital Platform</div>
-        <h3 class="vcard-impact">End-to-end<br>platform <span>delivery</span></h3>
-        <p class="vcard-desc">Primary strategic partner to a <strong>global energy company</strong> &mdash; owning digital platform delivery across web and mobile from UX strategy through staging and production release. Bridged product, UX, QA, and engineering across a complex, enterprise-grade environment.</p>
-        <div class="vcard-metrics">
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Partner scale</span>
-            <span class="vcard-val">$480B</span>
+
+      <!-- Card 1: Energy Platform Delivery -->
+      <details class="vignette-card">
+        <summary>
+          <div class="vcard-top-bar"></div>
+          <div class="vcard-sector">Energy &middot; Digital Platform</div>
+          <h3 class="vcard-impact">End-to-end<br>platform <span>delivery</span></h3>
+          <p class="vcard-desc">Primary strategic partner to a <strong>global energy company</strong> &mdash; owning digital platform delivery across web and mobile from UX strategy through staging and production release. Bridged product, UX, QA, and engineering across a complex enterprise environment.</p>
+          <div class="vcard-metrics">
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Partner scale</span>
+              <span class="vcard-val">$480B</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Delivery cycle improvement</span>
+              <span class="vcard-val">~30% faster</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Concurrent enterprise accounts</span>
+              <span class="vcard-val">7+</span>
+            </div>
           </div>
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Delivery cycle improvement</span>
-            <span class="vcard-val">~30% faster</span>
+          <div class="vcard-expand-row">
+            <span class="vcard-expand-label">Read case study</span>
+            <span class="vcard-expand-arrow">&#8595;</span>
           </div>
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Concurrent enterprise accounts</span>
-            <span class="vcard-val">7+</span>
+        </summary>
+        <div class="vcard-expanded">
+          <div class="cs-grid">
+            <div class="cs-block">
+              <div class="cs-block-label">Challenge</div>
+              <p class="cs-body">A global energy company with a $480B valuation needed a delivery partner to own the full digital lifecycle &mdash; from UX strategy through staging to production release across web and mobile. The environment demanded synchronised execution across multiple workstreams with minimal tolerance for delays or quality gaps.</p>
+            </div>
+            <div class="cs-block">
+              <div class="cs-block-label">Approach</div>
+              <ul class="cs-bullets">
+                <li>Operated as primary strategic partner, accountable end-to-end for delivery continuity</li>
+                <li>Established multi-project governance frameworks for simultaneous workstreams</li>
+                <li>Standardised UX-to-release pipeline with defined handoff protocols between design, QA, and engineering</li>
+                <li>Bridged stakeholder communication across product, technology, and executive layers</li>
+              </ul>
+            </div>
+            <div class="cs-block cs-block--outcome">
+              <div class="cs-block-label">Outcome</div>
+              <p class="cs-body">Cut average delivery cycle time by ~30%. Maintained delivery continuity and program quality across 7+ simultaneous enterprise accounts, with this partnership as the anchor engagement throughout.</p>
+            </div>
           </div>
         </div>
+      </details>
+
+      <!-- Card 2: Digital Banking Transformation -->
+      <details class="vignette-card">
+        <summary>
+          <div class="vcard-top-bar"></div>
+          <div class="vcard-sector">FinTech &middot; Banking &middot; Regulated</div>
+          <h3 class="vcard-impact">Digital banking<br><span>transformation</span></h3>
+          <p class="vcard-desc">Owned CX delivery for an <strong>enterprise digital banking platform</strong> serving retail and corporate customers. Led end-to-end journey optimisation, structured QA protocols, and maintained delivery continuity through a full platform migration in a regulated environment.</p>
+          <div class="vcard-metrics">
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Platform user base</span>
+              <span class="vcard-val">2M+</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Post-release defect reduction</span>
+              <span class="vcard-val">~35%</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Compliance standard</span>
+              <span class="vcard-val">Saudi Central Bank</span>
+            </div>
+          </div>
+          <div class="vcard-expand-row">
+            <span class="vcard-expand-label">Read case study</span>
+            <span class="vcard-expand-arrow">&#8595;</span>
+          </div>
+        </summary>
+        <div class="vcard-expanded">
+          <div class="cs-grid">
+            <div class="cs-block">
+              <div class="cs-block-label">Challenge</div>
+              <p class="cs-body">Saudi Awwal Bank (formerly HSBC Saudi Arabia) required end-to-end CX ownership for a platform serving 2M+ retail and corporate customers &mdash; in a tightly regulated environment undergoing a full HSBC-to-SAB platform migration under Saudi Central Bank compliance requirements.</p>
+            </div>
+            <div class="cs-block">
+              <div class="cs-block-label">Approach</div>
+              <ul class="cs-bullets">
+                <li>Owned the full CX delivery cycle from journey design through QA sign-off to production release</li>
+                <li>Introduced structured offer-testing and defect-tracking protocols tailored to a regulated banking context</li>
+                <li>Maintained SAMA compliance alignment and regulatory timelines throughout the migration</li>
+                <li>Optimised end-to-end customer journeys to improve on-platform engagement and task completion rates</li>
+              </ul>
+            </div>
+            <div class="cs-block cs-block--outcome">
+              <div class="cs-block-label">Outcome</div>
+              <p class="cs-body">Reduced post-release defect rates by ~35%. Delivered the HSBC&rarr;SAB platform migration without service disruption or regulatory incidents across a 2M+ user base.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Card 3: Distributed Team Leadership -->
+      <details class="vignette-card">
+        <summary>
+          <div class="vcard-top-bar"></div>
+          <div class="vcard-sector">Cross-Industry &middot; Global Teams</div>
+          <h3 class="vcard-impact">Distributed<br>team <span>leadership</span></h3>
+          <p class="vcard-desc">Built and led <strong>cross-functional teams across three continents</strong> &mdash; designers, engineers, and marketing specialists &mdash; standardising delivery workflows, reducing client escalations, and increasing program throughput across simultaneous enterprise accounts.</p>
+          <div class="vcard-metrics">
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Team size</span>
+              <span class="vcard-val">14 people</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Client escalation reduction</span>
+              <span class="vcard-val">~20%</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Operating span</span>
+              <span class="vcard-val">3 continents</span>
+            </div>
+          </div>
+          <div class="vcard-expand-row">
+            <span class="vcard-expand-label">Read case study</span>
+            <span class="vcard-expand-arrow">&#8595;</span>
+          </div>
+        </summary>
+        <div class="vcard-expanded">
+          <div class="cs-grid">
+            <div class="cs-block">
+              <div class="cs-block-label">Challenge</div>
+              <p class="cs-body">Leading a cross-functional team of 14 designers, engineers, and marketing specialists across three continents required consistent delivery standards, reliable escalation paths, and a shared operating rhythm &mdash; all while maintaining throughput across 7+ simultaneous enterprise accounts.</p>
+            </div>
+            <div class="cs-block">
+              <div class="cs-block-label">Approach</div>
+              <ul class="cs-bullets">
+                <li>Built cross-functional governance structures adapted for distributed, multi-timezone operations</li>
+                <li>Defined standardised delivery workflows and handoff protocols across design, engineering, and marketing</li>
+                <li>Implemented cadence frameworks to maintain stakeholder alignment across all accounts</li>
+                <li>Developed performance tracking to sustain throughput and surface blockers early</li>
+              </ul>
+            </div>
+            <div class="cs-block cs-block--outcome">
+              <div class="cs-block-label">Outcome</div>
+              <p class="cs-body">Reduced client escalations by ~20%. Increased program throughput while maintaining team cohesion across global operations spanning Europe, GCC, and the Americas.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Card 4: GO.MEDIA Design Systems -->
+      <details class="vignette-card">
+        <summary>
+          <div class="vcard-top-bar"></div>
+          <div class="vcard-sector">Logistics &middot; E-commerce &middot; Germany</div>
+          <h3 class="vcard-impact">Product strategy<br>&amp; design <span>systems</span></h3>
+          <p class="vcard-desc">As Senior Product Manager at <strong>GO.MEDIA</strong> in Germany, directed product and UX strategy across logistics and e-commerce digital platforms. Introduced a scalable design system that unified workflows across three concurrent product streams.</p>
+          <div class="vcard-metrics">
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Concurrent product streams</span>
+              <span class="vcard-val">3</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Design-to-dev handoff</span>
+              <span class="vcard-val">Standardised</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Platform scope</span>
+              <span class="vcard-val">Logistics &amp; E-com</span>
+            </div>
+          </div>
+          <div class="vcard-expand-row">
+            <span class="vcard-expand-label">Read case study</span>
+            <span class="vcard-expand-arrow">&#8595;</span>
+          </div>
+        </summary>
+        <div class="vcard-expanded">
+          <div class="cs-grid">
+            <div class="cs-block">
+              <div class="cs-block-label">Challenge</div>
+              <p class="cs-body">Three concurrent product streams in logistics and e-commerce operated on divergent design conventions, causing inconsistency, rework, and slow handoff cycles between design and development teams &mdash; each stream effectively running its own ad-hoc process.</p>
+            </div>
+            <div class="cs-block">
+              <div class="cs-block-label">Approach</div>
+              <ul class="cs-bullets">
+                <li>Built a shared design system &mdash; component library, design tokens, and documentation &mdash; as a single source of truth</li>
+                <li>Standardised design-to-development handoff protocols across all three product streams</li>
+                <li>Applied consistent UX strategy frameworks to align product and engineering on shared conventions</li>
+                <li>Facilitated cross-stream design reviews to maintain quality and convergence over time</li>
+              </ul>
+            </div>
+            <div class="cs-block cs-block--outcome">
+              <div class="cs-block-label">Outcome</div>
+              <p class="cs-body">Significantly reduced design-to-development handoff time. Improved consistency across all three product streams and enabled faster iteration by eliminating design divergence between teams.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Card 5: National Facilities Direct -->
+      <details class="vignette-card">
+        <summary>
+          <div class="vcard-top-bar"></div>
+          <div class="vcard-sector">BPO &middot; Facilities &middot; New York</div>
+          <h3 class="vcard-impact">BPO platform<br><span>transformation</span></h3>
+          <p class="vcard-desc">Led digital and operational transformation across <strong>BPO and facilities service platforms</strong> at National Facilities Direct. Coordinated distributed teams across three continents to deliver measurable usability improvements and accelerate service resolution.</p>
+          <div class="vcard-metrics">
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Client escalation reduction</span>
+              <span class="vcard-val">~20%</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Team span</span>
+              <span class="vcard-val">3 continents</span>
+            </div>
+            <div class="vcard-metric-row">
+              <span class="vcard-key">Focus</span>
+              <span class="vcard-val">Service resolution</span>
+            </div>
+          </div>
+          <div class="vcard-expand-row">
+            <span class="vcard-expand-label">Read case study</span>
+            <span class="vcard-expand-arrow">&#8595;</span>
+          </div>
+        </summary>
+        <div class="vcard-expanded">
+          <div class="cs-grid">
+            <div class="cs-block">
+              <div class="cs-block-label">Challenge</div>
+              <p class="cs-body">BPO and facilities service platforms were generating client escalations due to usability friction and slow service resolution. Coordinating delivery across teams in the USA, GCC, and Europe added significant operational complexity to an already pressured environment.</p>
+            </div>
+            <div class="cs-block">
+              <div class="cs-block-label">Approach</div>
+              <ul class="cs-bullets">
+                <li>Mapped end-to-end service workflows to identify and prioritise friction points</li>
+                <li>Led system usability improvements through structured product delivery cycles</li>
+                <li>Established escalation management and client communication frameworks</li>
+                <li>Built coordination protocols for distributed teams operating across three time zones</li>
+              </ul>
+            </div>
+            <div class="cs-block cs-block--outcome">
+              <div class="cs-block-label">Outcome</div>
+              <p class="cs-body">Reduced client escalations by ~20%. Accelerated service resolution times and improved client satisfaction across enterprise accounts, establishing a repeatable model for cross-continental delivery.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- Card 6: More on request -->
+      <div class="vignette-card vignette-card--more">
+        <div class="vcard-top-bar vcard-top-bar--static"></div>
+        <div class="vcard-sector">Confidential &middot; On Request</div>
+        <div class="vcard-more-body">
+          <h3 class="vcard-impact vcard-impact--dim">Further work<br>on <span>request</span></h3>
+          <p class="vcard-desc">Additional case studies in automotive digital services, FinTech product strategy, and B2B enterprise platforms are available. Confidential client details shared under NDA.</p>
+        </div>
+        <a class="vcard-more-cta" href="mailto:rawan.zhd@hotmail.com">Request portfolio &rarr;</a>
       </div>
 
-      <div class="vignette-card">
-        <div class="vcard-top-bar"></div>
-        <div class="vcard-sector">FinTech &middot; Banking &middot; Regulated</div>
-        <h3 class="vcard-impact">Digital banking<br><span>transformation</span></h3>
-        <p class="vcard-desc">Owned CX delivery for an <strong>enterprise digital banking platform</strong> serving retail and corporate customers. Led end-to-end journey optimisation, structured QA protocols, and maintained delivery continuity through a full platform migration in a regulated environment.</p>
-        <div class="vcard-metrics">
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Platform user base</span>
-            <span class="vcard-val">2M+</span>
-          </div>
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Post-release defect reduction</span>
-            <span class="vcard-val">~35%</span>
-          </div>
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Compliance standard</span>
-            <span class="vcard-val">Saudi Central Bank</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="vignette-card">
-        <div class="vcard-top-bar"></div>
-        <div class="vcard-sector">Cross-Industry &middot; Global Teams</div>
-        <h3 class="vcard-impact">Distributed<br>team <span>leadership</span></h3>
-        <p class="vcard-desc">Built and led <strong>cross-functional teams across three continents</strong> &mdash; designers, engineers, and marketing specialists &mdash; standardising delivery workflows, reducing client escalations, and increasing program throughput across simultaneous enterprise accounts.</p>
-        <div class="vcard-metrics">
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Team size</span>
-            <span class="vcard-val">14 people</span>
-          </div>
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Client escalation reduction</span>
-            <span class="vcard-val">~20%</span>
-          </div>
-          <div class="vcard-metric-row">
-            <span class="vcard-key">Operating span</span>
-            <span class="vcard-val">3 continents</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 

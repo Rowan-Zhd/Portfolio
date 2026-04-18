@@ -119,6 +119,43 @@ body {
 }
 @keyframes sweep { 0% { left: -100%; } 100% { left: 100%; } }
 
+/* ── HERO COMPASS ── */
+.hero-compass {
+  position: absolute;
+  right: -16%; top: 50%;
+  transform: translateY(-50%);
+  width: 56%; aspect-ratio: 1;
+  z-index: 0; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 20%, black 42%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 20%, black 42%);
+}
+.compass-svg {
+  width: 100%; height: 100%;
+  overflow: visible;
+}
+/* Primary arm — one full rotation every 25s */
+.compass-arm-primary {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  animation: compass-spin 25s linear infinite;
+}
+/* Secondary arm — counter-rotates slowly */
+.compass-arm-secondary {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  animation: compass-spin 50s linear infinite reverse;
+}
+@keyframes compass-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.hero-body { position: relative; z-index: 2; }
+.hero-glow { z-index: 1; }
+
+@media (max-width: 860px) {
+  .hero-compass { display: none; }
+}
+
 /* ── METRICS BAND ── */
 #metrics {
   background: #0F0F0F;
@@ -458,6 +495,138 @@ body {
   text-decoration: none; background: transparent; transition: all 0.25s ease;
 }
 .avail-cta:hover { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+
+/* ── EXPANDABLE CARDS ── */
+details.vignette-card {
+  padding: 0;
+}
+details.vignette-card > summary {
+  padding: 44px 40px;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  outline: none;
+}
+details.vignette-card > summary::-webkit-details-marker { display: none; }
+details.vignette-card > summary::marker { content: none; }
+
+.vcard-expand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.25s;
+}
+details.vignette-card:hover .vcard-expand-row { color: var(--gold); }
+details.vignette-card[open] .vcard-expand-row { color: var(--gold); }
+
+.vcard-expand-arrow {
+  font-size: 13px;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+details.vignette-card[open] .vcard-expand-arrow { transform: rotate(180deg); }
+
+/* ── CASE STUDY (EXPANDED) ── */
+.vcard-expanded {
+  padding: 0 40px 44px;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.05s;
+}
+details[open] > .vcard-expanded { opacity: 1; }
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.cs-block-label {
+  font-size: 9.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.cs-body {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #5A5A5A;
+  font-weight: 300;
+}
+.cs-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.cs-bullets li {
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #545454;
+  padding-left: 18px;
+  position: relative;
+  font-weight: 300;
+}
+.cs-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 9px;
+  width: 6px; height: 1px;
+  background: var(--gold);
+}
+.cs-block--outcome {
+  grid-column: 1 / -1;
+  background: rgba(201,169,110,0.03);
+  border: 1px solid rgba(201,169,110,0.1);
+  padding: 20px 24px;
+}
+.cs-block--outcome .cs-body { color: #888; }
+
+/* ── "MORE ON REQUEST" CARD ── */
+.vignette-card--more {
+  justify-content: space-between;
+}
+.vcard-top-bar--static {
+  transform: scaleX(0.25);
+  transform-origin: left;
+}
+.vignette-card--more:hover .vcard-top-bar--static {
+  transform: scaleX(1);
+}
+.vcard-impact--dim { opacity: 0.55; }
+.vcard-more-body { flex: 1; }
+.vcard-more-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 11px 22px;
+  border: 1px solid rgba(201,169,110,0.3);
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.25s ease;
+  align-self: flex-start;
+}
+.vcard-more-cta:hover {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+}
 
 /* ── FOOTER ── */
 #footer {
