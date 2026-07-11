@@ -1,0 +1,19 @@
+# Internal / dev material — must NOT be published to the public GitHub Pages site
+
+# design-audit report + un-anonymized before/after screenshots
+docs/
+
+# unused local fonts (site loads Inter from Google Fonts) + font build script
+assets/fonts/
+
+# build script (deliver artifact only)
+assets/build_linkedin_cover.py
+
+# separate LinkedIn deliverable, not part of the site
+assets/linkedin-cover.png
+
+# local image tooling
+imgtools/
+
+# raw/anonymization staging — NEVER publish; only approved derivatives get moved into assets/
+_staging/
