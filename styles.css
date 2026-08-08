@@ -132,7 +132,7 @@ img { max-width:100%; height:auto; display:block; }
 .ledger-row {
   grid-column: 1 / -1;
   display:grid; grid-template-columns: subgrid;
-  gap:10px 32px; align-items:center;
+  gap:10px 96px; align-items:center;
   padding:20px 0; border-bottom:1px solid var(--hairline);
 }
 @supports not (grid-template-columns: subgrid) {
@@ -202,8 +202,8 @@ img { max-width:100%; height:auto; display:block; }
 /* ── experience ledger ── */
 #experience { padding:100px 0; background:var(--ink-2); border-top:1px solid var(--hairline); }
 .xp { border-top:1px solid var(--hairline-2); }
-.xp-row { display:grid; grid-template-columns: 128px minmax(0,1.15fr) minmax(0,1.6fr); gap:8px 32px; padding:26px 0; border-bottom:1px solid var(--hairline); align-items:start; }
-.xp-when { font-family:var(--mono); font-size:11.5px; letter-spacing:0.08em; color:var(--stone-dim); line-height:1.8; text-transform:uppercase; }
+.xp-row { display:grid; grid-template-columns: 190px minmax(0,1.05fr) minmax(0,1.6fr); gap:8px 32px; padding:26px 0; border-bottom:1px solid var(--hairline); align-items:start; }
+.xp-when { font-family:var(--mono); font-size:11.5px; letter-spacing:0.08em; color:var(--stone-dim); line-height:1.8; text-transform:uppercase; white-space:nowrap; }
 .xp-when .now { color:var(--moss); }
 .xp-co { font-family:var(--serif); font-size:25px; font-weight:500; line-height:1.15; }
 .xp-co small { display:block; font-family:var(--sans); font-size:11.5px; color:var(--stone-dim); font-style:italic; margin-top:3px; }
